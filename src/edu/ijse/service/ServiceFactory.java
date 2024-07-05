@@ -4,6 +4,7 @@
  */
 package edu.ijse.service;
 
+import edu.ijse.service.custom.impl.BookServiceImpl;
 import edu.ijse.service.custom.impl.CategoryServiceImpl;
 
 public class ServiceFactory {
@@ -20,7 +21,7 @@ public class ServiceFactory {
         case CATEGORY:
             return new CategoryServiceImpl();
         case BOOK:
-            return null;
+            return new BookServiceImpl();
         default:
             return null;
     }

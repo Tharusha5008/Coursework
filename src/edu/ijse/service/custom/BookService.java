@@ -17,4 +17,5 @@ public interface BookService extends SuperService{
     String delete(String bookId) throws Exception;
     BookDto get(String bookId) throws Exception;
     ArrayList<BookDto> getAll() throws Exception; 
+   
 }

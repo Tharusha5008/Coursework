@@ -4,6 +4,7 @@
  */
 package edu.ijse.dao;
 
+import edu.ijse.dao.custom.impl.BookDaoImpl;
 import edu.ijse.dao.custom.impl.CategoryDaoImpl;
 
 /**
@@ -25,13 +26,15 @@ public class DaoFactory {
     switch(type){
         case CATEGORY:
             return new CategoryDaoImpl();
+        case BOOK:
+            return new BookDaoImpl();
         default:
             return null;
     }
     }
     
     public enum DaoTypes{
-    CATEGORY, BOOKS, MEMBERS, ORDERS, ORDER_DETAIL;
+    CATEGORY, BOOK, MEMBERS, ORDERS, ORDER_DETAIL;
     
     }
 }
