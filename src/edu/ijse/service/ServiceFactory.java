@@ -19,11 +19,13 @@ public class ServiceFactory {
     switch (serviceType){
         case CATEGORY:
             return new CategoryServiceImpl();
+        case BOOK:
+            return null;
         default:
             return null;
     }
     }
     public enum ServiceType{
-    CATEGORY
+    CATEGORY, BOOK
     }
 }
