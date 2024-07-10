@@ -6,6 +6,7 @@ package edu.ijse.service;
 
 import edu.ijse.service.custom.impl.BookServiceImpl;
 import edu.ijse.service.custom.impl.CategoryServiceImpl;
+import edu.ijse.service.custom.impl.MemberServiceImpl;
 
 public class ServiceFactory {
     private static ServiceFactory serviceFactory;
@@ -22,11 +23,13 @@ public class ServiceFactory {
             return new CategoryServiceImpl();
         case BOOK:
             return new BookServiceImpl();
+        case MEMBER:
+            return new MemberServiceImpl();
         default:
             return null;
     }
     }
     public enum ServiceType{
-    CATEGORY, BOOK
+    CATEGORY, BOOK, MEMBER
     }
 }
