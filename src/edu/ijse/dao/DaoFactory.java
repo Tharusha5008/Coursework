@@ -6,6 +6,7 @@ package edu.ijse.dao;
 
 import edu.ijse.dao.custom.impl.BookDaoImpl;
 import edu.ijse.dao.custom.impl.CategoryDaoImpl;
+import edu.ijse.dao.custom.impl.MemberDaoImpl;
 
 /**
  *
@@ -28,6 +29,8 @@ public class DaoFactory {
             return new CategoryDaoImpl();
         case BOOK:
             return new BookDaoImpl();
+        case MEMBERS:
+            return new MemberDaoImpl();
         default:
             return null;
     }

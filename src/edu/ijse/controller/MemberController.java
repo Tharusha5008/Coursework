@@ -37,4 +37,5 @@ public class MemberController {
     public MemberDto get(String nic) throws Exception{
         return memberService.get(nic);
     }
+    
 }

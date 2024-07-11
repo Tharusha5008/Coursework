@@ -6,6 +6,7 @@ package edu.ijse;
 
 import edu.ijse.view.BooksView;
 import edu.ijse.view.CategoryView;
+import edu.ijse.view.MemberView;
 
 /**
  *
@@ -18,7 +19,7 @@ public class Main {
      */
     public static void main(String[] args){
         // TODO code application logic here
-        new BooksView().setVisible(true);
+        new MemberView().setVisible(true);
        // new CategoryView().setVisible(true);
     }
     
