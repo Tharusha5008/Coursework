@@ -18,5 +18,6 @@ public interface IssueService extends SuperService {
     String delete(String nic) throws Exception;
     IssueDto get(String nic) throws Exception;
     ArrayList<IssueDto> getAll() throws Exception;
+  
     
 }

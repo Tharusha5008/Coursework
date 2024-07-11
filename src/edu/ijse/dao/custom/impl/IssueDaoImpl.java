@@ -24,17 +24,24 @@ public class IssueDaoImpl implements IssueDao{
 
     @Override
     public boolean update(IssueEntity t) throws Exception {
-    return CrudUtil.executeUpdate("UPDATE issue SET returnBook=? WHERE NIC=?", t.getReturnBook(),t.getNic());
+    return CrudUtil.executeUpdate("UPDATE issue SET returnBook=? WHERE NIC=?", "Yes",t.getNic());
     }
 
     @Override
     public boolean delete(String id) throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+      return CrudUtil.executeUpdate("UPDATE issue SET returnBook='Yes' WHERE NIC=?", id);
     }
 
     @Override
     public IssueEntity get(String id) throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+      ResultSet rst = CrudUtil.executeQuery("SELECT * FROM issue WHERE NIC = ?", id);
+        if(rst.next()){
+            IssueEntity entity = new IssueEntity(rst.getString("nic"), 
+                    rst.getString("bookid"), rst.getString("issuedate"), 
+                    rst.getString("duedate"), rst.getString("returnbook"));
+            return entity;
+        }
+        return null;  
     }
 
     @Override
@@ -48,5 +55,6 @@ public class IssueDaoImpl implements IssueDao{
         }
         return itemEntities;
     }
+
     }
     

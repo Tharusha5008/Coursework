@@ -34,4 +34,5 @@ public class IssueController {
     public IssueDto get(String nic) throws Exception{
         return issueService.get(nic);
     }
+
 }
