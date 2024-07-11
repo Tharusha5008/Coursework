@@ -3,11 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package edu.ijse;
-
-import edu.ijse.view.BooksView;
-import edu.ijse.view.CategoryView;
-import edu.ijse.view.MemberView;
-
+import edu.ijse.view.Login;
 /**
  *
  * @author tharu
@@ -19,7 +15,7 @@ public class Main {
      */
     public static void main(String[] args){
         // TODO code application logic here
-        new MemberView().setVisible(true);
+        new Login().setVisible(true);
        // new CategoryView().setVisible(true);
     }
     
